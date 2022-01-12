@@ -1,24 +1,7 @@
-// "C:\\Users\\nicho\\Documents\\classes\\music220b\\hw1\\test_tone.wav" => string filename;
-
 // me.dir() + "/test_tone_rev.wav" => string filename;
 // me.dir() + "/test_tone.wav" => string filename;
 me.dir() + "/chapman_rev.wav" => string filename;
 
-float panRange;
-float Q;
-
-fun void playAudio(float freq) {
-    SndBuf buf => ResonZ r => Pan2 p => dac;
-    filename => buf.read;
-    
-    Math.random2f(-1. * panRange, panRange) => p.pan;
-    freq => r.freq;
-    Q => r.Q;
-    4 => r.gain;
-
-    0 => buf.pos;
-    buf.length() => now;  
-}
 
 [ 
     0.04,
@@ -63,7 +46,25 @@ fun void playAudio(float freq) {
 float chance;
 dur rhythm;
 float percentile;
+float panRange;
+float Q;
+
 1 => int running;
+
+
+fun void playAudio(float freq) {
+    SndBuf buf => ResonZ r => Pan2 p => dac;
+    filename => buf.read;
+    
+    Math.random2f(-1. * panRange, panRange) => p.pan;
+    freq => r.freq;
+    Q => r.Q;
+    4 => r.gain;
+
+    0 => buf.pos;
+    buf.length() => now;  
+}
+
 
 fun void advanceScore() {
     // 0 => int idx;
@@ -105,7 +106,4 @@ filename => buf.read;
 2 => buf.gain;
 
 0 => buf.pos;
-buf.length() => now;  
-
-
-100::second => now;
+buf.length() => now; 

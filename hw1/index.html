@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+		<link rel="stylesheet" href="styles/styles.css">
+		<title>Music 220B Homework 1</title>
+	</head>
+	<body>
+		<div class="pure-g">
+			<div class="pure-u-1-1 center">
+				<h1>Music 220B Homework #1</h1>
+
+				<h2>Running the Code</h2>
+				
+				<h2>Sound Logo for my Chapman Stick</h2>
+				<p>
+					My sound logo is derived from, and for,
+					my <a href="https://www.youtube.com/watch?v=a7kIclA4yq4">chapman
+					stick</a>, which is a polyphonic, 8-12 stringed instrument
+					in the electric guitar family that I've been playing for
+					almost 2 years. This is part of a slow process of
+					introducing it into my compositional work.
+				</p>
+
+				<p>
+					The sound source for the logo is a recording of me playing a
+					chord, which is then reversed
+					(ala <a href="https://www.youtube.com/watch?v=cPCLFtxpadE">Roundabout</a>).
+
+					The stick has a big range (it's effectively a bass and a
+					guitar), so I tried making the chord pretty big and spread
+					out.
+
+					This audio file is then played back a bunch of times in
+					quick succession on top of each other. Each playback has a
+					heavily Q'd ResonZ filter at a random freq so that you only
+					get a small slice of the recording. This turns the reversal
+					sound into more of a textural effect.
+				</p>
+
+				<p>
+					The progression from this piece comes from me changing the
+					variables surrounding the file playback. As the program
+					progresses, the rhythm gets more regular, the frequency
+					range of the filters increases from high to low, the Q is
+					decreased, and the panning field expands. It's closed out
+					with the full audio file being played. The whole thing is
+					basically a big crescendo.
+				</p>
+
+				<p>
+					<audio controls src="./sound_logo_output.wav"></audio>
+				</p>				
+				
+				<h2>Chucku #1</h2>
+				<p>
+					This first chucku is super noisy. It's an expansion of
+					kijjaz's <a href="https://electro-music.com/forum/post-95506.html#95506">intergalactic
+						sound check</a>.
+
+					I played around with two PitShfit feeding into each other,
+					the first is slightly higher than its input and the second
+					is much, much lower. This seems to create an interesting
+					dynamic, unstable, noisy system that has lots of fun twists and turns.
+					
+					
+				</p>
+
+				<p>
+					Warning: LOUD
+				</p>
+				<p>
+					<audio controls src="./chucku1_ex.wav"></audio>
+				</p>
+
+				<h2>Chucku #2</h2>
+				<p>
+					This one is just a simple repetitive tone, with a randomized
+					rhythm. I enjoy the regularity of it (but it's not too
+					regular on account of the randomness).
+				</p>
+
+				<p>
+					<audio controls src="./chucku2_ex.wav"></audio>
+				</p>
+
+				
+
+				<h2> Files </h2>
+
+				<ul>
+					<li> <a href="./generate_tracks.ck"> chuck program that generates tracks with random start time and playback speeds </a> </li>
+					<li> <a href="./rotate_tracks.py"> python script to binarually rotate tracks with a random frequency and phase </a> </li>
+					<li> <a href="./create_mix.ck"> chuck program to play all the generated tracks simultaneously </a> </li>
+					<li> <a href="./media/lake_lag1.wav"> field recording 1 </a> </li>
+					<li> <a href="./media/lake_lag2.wav"> field recording 2 </li>
+				</ul>
+			</div>
+		</div>
+		<script src="./script.js" type="module"></script>
+	</body>
+</html>
